@@ -1,0 +1,20 @@
+.icon-add {
+    color: rgb(17, 182, 17);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icon-add:active {
+    color: rgb(7, 172, 7);
+}
+
+
+.icon-trash {
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icon-trash:active {
+    color: rgb(171, 2, 2);
+}

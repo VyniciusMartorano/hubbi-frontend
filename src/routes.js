@@ -3,9 +3,9 @@ import { Routes, BrowserRouter } from "react-router-dom"
 
 import getPrivateRoute from './components/PrivateRoute'
 import getDefaultRoute from "./components/getDefaultRoute"
-import Login from "./components/Login"
-import Home from "./components/Home"
-
+import Login from "./components/login/Login"
+import Home from "./components/home/Home"
+import CreateProduct from './components/createproduct/CreateProduct'
 
 
 function App(props) {
@@ -14,6 +14,7 @@ function App(props) {
   ]
   const privateRoutesComponents = [
       {component: <Home />, path: '/'},
+      {component: <CreateProduct />, path: '/createProduct'},
   ]
 
   return (

@@ -1,8 +1,8 @@
 import React from "react"
-import './../css/login.css'
+import './../../css/login.css'
 import { useState } from "react"
-import LoginService from "../services/LoginService"
-import { setToken, setRefreshToken } from "../services/auth"
+import LoginService from "./LoginService"
+import { setToken, setRefreshToken } from "../../services/auth"
 import { Navigate } from "react-router-dom"
 
 
