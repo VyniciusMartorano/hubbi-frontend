@@ -21,3 +21,4 @@ const getPrivateRoute = (item) => {
 }
 
 export default getPrivateRoute
+

@@ -4,7 +4,7 @@ import { Routes, BrowserRouter } from "react-router-dom"
 import getPrivateRoute from './components/PrivateRoute'
 import getDefaultRoute from "./components/getDefaultRoute"
 import Login from "./components/Login"
-
+import Home from "./components/Home"
 
 
 
@@ -13,7 +13,7 @@ function App(props) {
       {component: <Login />, path: '/login'},
   ]
   const privateRoutesComponents = [
-      {component: <h1>home</h1>, path: '/'},
+      {component: <Home />, path: '/'},
   ]
 
   return (

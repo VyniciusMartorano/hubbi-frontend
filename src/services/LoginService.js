@@ -1,0 +1,18 @@
+import api from "./api"
+
+
+
+class LoginService {
+    constructor() {
+        this.api = new api()
+    }
+    
+    
+    Logar(username, password ) {
+        return this.api.axios.post(`token/`, {username, password})
+    }
+    
+}
+
+
+export default LoginService
