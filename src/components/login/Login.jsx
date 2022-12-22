@@ -1,16 +1,23 @@
 import React from "react"
 import './../../css/login.css'
-import { useState } from "react"
 import LoginService from "./LoginService"
-import { setToken, setRefreshToken } from "../../services/auth"
+import { setToken, setRefreshToken, getToken } from "../../services/auth"
 import { Navigate } from "react-router-dom"
-
+import { useState, useEffect } from "react"
 
 const Login = () => {
     const [isLogged, setisLogged] = useState(false)
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
     const Serv = new LoginService()
+
+    
+
+    useEffect(() => {
+      if (getToken()) {
+        setisLogged(true)
+      }
+    }, [])
 
     const logar = () => {
       Serv.Logar(user, password).then(

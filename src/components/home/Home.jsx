@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import HomeService from "./HomeService"
 import './../../css/home.css'
+import { Navigate } from "react-router-dom"
 
 
 
@@ -8,7 +9,7 @@ class Home extends Component {
     constructor(props) {
         super(props)
 
-        this.state = {products: [], cart: [], message: ''}
+        this.state = {products: [], cart: [], message: '', myRequests: false}
         this.Service = new HomeService()      
     }
     
@@ -81,6 +82,7 @@ class Home extends Component {
     render() {
         return (
             <div className="container mt-4 mb-4">
+                {this.state.myRequests && (<Navigate to={'/requests'} />)}
 
                 <div className="row">
                     <div className="col">
@@ -108,6 +110,8 @@ class Home extends Component {
                             </table>
                         </div>
                         <h3>Carrinho</h3>
+                        <button type="button" onClick={() => this.setState({myRequests: true})} className="btn btn-primary">Seus Pedidos</button>
+
                         <h4>{this.state.message}</h4>
                         <div className="table-responsive">
                             <table className="table table-striped">
@@ -131,7 +135,6 @@ class Home extends Component {
                             </table>
                         </div>
                         <button type="button" onClick={() => this.salvarCompra()} className="btn btn-success">Finalizar a compra</button>
-
                     </div>
 
                 </div>
