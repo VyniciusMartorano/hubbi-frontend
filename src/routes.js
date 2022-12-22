@@ -6,6 +6,8 @@ import getDefaultRoute from "./components/getDefaultRoute"
 import Login from "./components/login/Login"
 import Home from "./components/home/Home"
 import CreateProduct from './components/createproduct/CreateProduct'
+import Requests from "./components/requests/Requests"
+
 
 
 function App(props) {
@@ -15,6 +17,7 @@ function App(props) {
   const privateRoutesComponents = [
       {component: <Home />, path: '/'},
       {component: <CreateProduct />, path: '/createProduct'},
+      {component: <Requests />, path: '/requests'},
   ]
 
   return (

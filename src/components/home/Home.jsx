@@ -68,7 +68,7 @@ class Home extends Component {
     }
 
     salvarItensCompra(compra_id) {
-        this.Service.salvarItensCompra(this.state.cart, compra_id).then(
+        this.Service.salvarItensCompra(this.state.cart, compra_id, this.state.user.id).then(
             ({ data }) => {
                 this.setState({cart: []})
                 console.log(data)

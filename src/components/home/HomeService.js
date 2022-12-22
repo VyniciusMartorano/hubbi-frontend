@@ -12,12 +12,12 @@ class HomeService {
     async getProdutos() {
         return await this.api.axios.get(`produto/`)
     }
-    async salvarCompra(user_id) {
-        return await this.api.axios.post(`compra/`, {user_id})
+    async salvarCompra(user) {
+        return await this.api.axios.post(`compra/`, {user})
     }
 
-    async salvarItensCompra(itens, compra_id) {
-        return await this.api.axios.post(`compraprodutos/save_compras_and_itens/`, {itens, compra_id})
+    async salvarItensCompra(itens, compra_id, user_id) {
+        return await this.api.axios.post(`compraproduto/save_itens_compra/`, {itens, compra_id, user_id})
     }
     
 
