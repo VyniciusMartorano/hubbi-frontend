@@ -1,0 +1,9 @@
+.container-create-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crud-box {
+    width: 300px;
+}

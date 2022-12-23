@@ -8,8 +8,8 @@ class LoginService {
     }
     
     
-    Logar(username, password ) {
-        return this.api.axios.post(`token/`, {username, password})
+    async Logar(username, password ) {
+        return await this.api.axios.post(`token/`, {username, password})
     }
     
 }

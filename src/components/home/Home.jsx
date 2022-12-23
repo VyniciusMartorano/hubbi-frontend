@@ -9,7 +9,13 @@ class Home extends Component {
     constructor(props) {
         super(props)
 
-        this.state = {products: [], cart: [], message: '', myRequests: false}
+        this.state = {
+            products: [], 
+            cart: [], 
+            message: '', 
+            myRequests: false, 
+            cadastrarProduto: false
+        }
         this.Service = new HomeService()      
     }
     
@@ -83,11 +89,12 @@ class Home extends Component {
         return (
             <div className="container mt-4 mb-4">
                 {this.state.myRequests && (<Navigate to={'/requests'} />)}
+                {this.state.cadastrarProduto && (<Navigate to={'/createProduct'} />)}
 
                 <div className="row">
                     <div className="col">
                         <h3 className="mb-4">Produtos</h3>
-
+                        <button type="button" onClick={() => this.setState({cadastrarProduto: true})} className="btn btn-success">Cadastrar Produto</button>
                         <div className="table-responsive">
                             <table className="table table-striped">
                                 <tr>

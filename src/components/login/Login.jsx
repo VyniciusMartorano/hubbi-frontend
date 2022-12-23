@@ -9,6 +9,7 @@ const Login = () => {
     const [isLogged, setisLogged] = useState(false)
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
+
     const Serv = new LoginService()
 
     
@@ -26,7 +27,9 @@ const Login = () => {
           setRefreshToken(data.refresh)
           setisLogged(true)
         },
-        () => setisLogged(false)
+        () => {
+          setisLogged(false)
+        }
       )
     }
 
